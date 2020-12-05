@@ -1,5 +1,5 @@
 import { ExtensionContext, window, StatusBarAlignment, StatusBarItem, Disposable, WorkspaceConfiguration, workspace } from 'vscode';
-import { Position } from './constants';
+import { Battery, INTERVAL_REFRESH_RATE, Position } from './constants';
 import moment = require('moment');
 import sysInfo = require('systeminformation');
 
@@ -9,7 +9,9 @@ export function activate(context: ExtensionContext) {
   context.subscriptions.push(workspace.onDidChangeConfiguration(() => lifelineStatus.updateConfig()));
 }
 
-export function deactivate() { return null; }
+export function deactivate() {
+  return null; 
+}
 
 export class Lifeline {
   private batteryStatus!: StatusBarItem;
@@ -39,7 +41,7 @@ export class Lifeline {
     this.updateTime();
     this.updateBattery();
 
-    if (this.oldconfig != this.config) {
+    if (this.oldconfig !== this.config) {
       this.dispose();
       this.createLifeline();
     }
@@ -69,11 +71,11 @@ export class Lifeline {
     return setInterval(() => {
       this.timeStatus.text = moment().format(this.config.get('clock.format'));
       this.updateBattery();
-    }, 1000);
+    }, INTERVAL_REFRESH_RATE);
   }
 
   private async updateBattery() {
-    const battery = Math.min(Math.max((await sysInfo.battery()).percent, 0), 100);
+    const battery = Math.min(Math.max((await sysInfo.battery()).percent, Battery.MIN), Battery.MAX);
     const charging = (await sysInfo.battery()).ischarging ? '+' : '';
     return this.batteryStatus.text = `${charging}${battery}%`;
   }

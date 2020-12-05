@@ -7,6 +7,7 @@
 	"license": "MIT",
 	"homepage": "https://github.com/kjhx/vscode-lifeline#readme",
 	"publisher": "kjhx",
+	"icon": "media/icon.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kjhx/vscode-lifeline"

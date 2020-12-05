@@ -36,7 +36,7 @@
 				"lifeline.swap": {
 					"type": "boolean",
 					"default": false,
-					"description": "Swap the display order of the battery and clock. Ignored if device has no battery."
+					"description": "Swap the display order of the battery and clock."
 				}
 			}
 		}

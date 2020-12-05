@@ -1,9 +1,10 @@
-.vscode/**
-out/test/**
-test/**
-src/**
 **/*.map
+.eslintrc.js
 .gitignore
+.vscode/**
+media/src/**
+out/test/**
+src/**
+test/**
 tsconfig.json
 yarn.lock
-.eslintrc.js

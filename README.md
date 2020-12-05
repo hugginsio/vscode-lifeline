@@ -8,9 +8,9 @@ Lifeline presents the time and battery level of your laptop in the bottom right 
 Lifeline will also show that your laptop is charging.
 
 ## Preview
-Device unplugged | Device charging
-- | -
-![Device unplugged](./media/device-unplugged.png) | ![Device charging](./media/device-charging.png)
+| Device unplugged | Device charging |
+| - | - |
+| ![Device unplugged](./media/device-unplugged.png) | ![Device charging](./media/device-charging.png) |
 
 ## Configuration
 ### `lifeline.clock.format`

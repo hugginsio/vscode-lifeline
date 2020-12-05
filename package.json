@@ -1,0 +1,61 @@
+{
+	"name": "vscode-lifeline",
+	"displayName": "Lifeline",
+	"description": "Show the current time and battery level right in the status bar.",
+	"version": "1.1.0",
+	"author": "Kyle Huggins (http://huggins.io/)",
+	"license": "MIT",
+	"homepage": "https://github.com/kjhx/vscode-lifeline#readme",
+	"publisher": "kjhx",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kjhx/vscode-lifeline"
+	},
+	"bugs": {
+		"url": "https://github.com/kjhx/vscode-lifeline/issues"
+	},
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "Lifeline",
+			"properties": {
+				"lifeline.clock.format": {
+					"type": "string",
+					"default": "hh:mm:ss A",
+					"description": "Set the datetime display format for the clock."
+				},
+				"lifeline.swap": {
+					"type": "boolean",
+					"default": false,
+					"description": "Swap the display order of the battery and clock. Ignored if device has no battery."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"vscode:prepublish": "npm run compile",
+		"watch": "tsc -watch -p ./"
+	},
+	"dependencies": {
+		"moment": "^2.29.1",
+		"systeminformation": "^4.30.11"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.32.0",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"eslint": "^7.1.0",
+		"typescript": "^4.0.2"
+	}
+}

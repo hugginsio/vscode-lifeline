@@ -1,7 +1,7 @@
 {
 	"name": "vscode-lifeline",
 	"displayName": "Lifeline",
-	"description": "Show the current time and battery level right in the status bar.",
+	"description": "Show a clock and current battery state in the status bar.",
 	"version": "1.1.0",
 	"author": "Kyle Huggins (http://huggins.io/)",
 	"license": "MIT",

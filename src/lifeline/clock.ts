@@ -1,6 +1,6 @@
 import moment = require("moment");
 import { ExtensionContext, StatusBarAlignment, StatusBarItem, window } from "vscode";
-import { CLOCK_REFRESH_RATE, Position } from "../constants";
+import { Position } from "../constants";
 import { ExtensionConfiguration } from "../interfaces";
 import { utils } from "./utils";
 
@@ -47,6 +47,6 @@ export class Clock {
     
     return setInterval(() => {
       this.clock.text = moment().format(this.config.clockFormat);
-    }, CLOCK_REFRESH_RATE);
+    }, this.config.clockInterval);
   }
 }

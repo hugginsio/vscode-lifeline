@@ -33,15 +33,27 @@
 		"configuration": {
 			"title": "Lifeline",
 			"properties": {
+				"lifeline.swap": {
+					"type": "boolean",
+					"default": false,
+					"description": "Swap the display order of the battery and clock."
+				},
 				"lifeline.clock.format": {
 					"type": "string",
 					"default": "h:mm:ss A",
 					"description": "Set the display format for the clock."
 				},
-				"lifeline.swap": {
-					"type": "boolean",
-					"default": false,
-					"description": "Swap the display order of the battery and clock."
+				"lifeline.clock.interval": {
+					"type": "number",
+					"default": 1000,
+					"minimum": 1000,
+					"description": "Set the polling interval for the clock in ms."
+				},
+				"lifeline.battery.interval": {
+					"type": "number",
+					"default": 3000,
+					"minimum": 1000,
+					"description": "Set the polling interval for the battery in ms."
 				}
 			}
 		}

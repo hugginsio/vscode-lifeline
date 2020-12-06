@@ -55,6 +55,6 @@ export class Battery {
 
     return setInterval(() => {
       this.updateBattery();
-    }, BATTERY_REFRESH_RATE);
+    }, this.config.batteryInterval);
   }
 }

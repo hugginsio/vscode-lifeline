@@ -9,6 +9,3 @@ export const enum BatteryLevel {
   MIN = 0,
   MAX = 100
 }
-
-export const CLOCK_REFRESH_RATE = 1000;
-export const BATTERY_REFRESH_RATE = 3000;

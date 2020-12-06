@@ -36,7 +36,7 @@
 				"lifeline.swap": {
 					"type": "boolean",
 					"default": false,
-					"description": "Swap the display order of the battery and clock."
+					"description": "Swap the display order of the battery and clock. Ignored if device has no battery."
 				},
 				"lifeline.clock.format": {
 					"type": "string",
@@ -53,7 +53,7 @@
 					"type": "number",
 					"default": 3000,
 					"minimum": 1000,
-					"description": "Set the polling interval for the battery in ms."
+					"description": "Set the polling interval for the battery in ms. Ignored if device has no battery."
 				}
 			}
 		}

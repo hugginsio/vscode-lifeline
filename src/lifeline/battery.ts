@@ -1,8 +1,8 @@
-import { battery as batteryInfo } from "systeminformation";
-import { StatusBarAlignment, StatusBarItem, window } from "vscode";
-import { BatteryLevel, BATTERY_REFRESH_RATE, Position } from "../constants";
-import { ExtensionConfiguration } from "../interfaces";
-import { utils } from "./utils";
+import { battery as batteryInfo } from 'systeminformation';
+import { StatusBarAlignment, StatusBarItem, window } from 'vscode';
+import { BatteryLevel, Position } from '../constants';
+import { ExtensionConfiguration } from '../interfaces';
+import { utils } from './utils';
 
 export class Battery {
   private config: ExtensionConfiguration;
@@ -44,7 +44,7 @@ export class Battery {
 
   private updateBattery(): void {
     batteryInfo().then((data) => {
-      const level = Math.min(Math.max(data.percent, BatteryLevel.MIN), BatteryLevel.MAX)
+      const level = Math.min(Math.max(data.percent, BatteryLevel.MIN), BatteryLevel.MAX);
       const charging = data.ischarging ? '+' : '';
       this.battery.text = `${charging}${level}%`;
     });

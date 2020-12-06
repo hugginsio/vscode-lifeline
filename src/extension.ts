@@ -1,5 +1,4 @@
-import { ExtensionContext, window, StatusBarAlignment, StatusBarItem, Disposable, WorkspaceConfiguration, workspace } from 'vscode';
-import { ExtensionConfiguration } from './interfaces';
+import { ExtensionContext, workspace } from 'vscode';
 import { Battery } from './lifeline/battery';
 import { Clock } from './lifeline/clock';
 import { utils } from './lifeline/utils';

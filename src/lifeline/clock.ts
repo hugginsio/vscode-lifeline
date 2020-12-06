@@ -1,8 +1,8 @@
-import moment = require("moment");
-import { ExtensionContext, StatusBarAlignment, StatusBarItem, window } from "vscode";
-import { Position } from "../constants";
-import { ExtensionConfiguration } from "../interfaces";
-import { utils } from "./utils";
+import moment = require('moment');
+import { StatusBarAlignment, StatusBarItem, window } from 'vscode';
+import { Position } from '../constants';
+import { ExtensionConfiguration } from '../interfaces';
+import { utils } from './utils';
 
 export class Clock {
   private config: ExtensionConfiguration;

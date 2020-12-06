@@ -5,9 +5,7 @@ export const enum Position {
   RIGHT = -99
 }
 
-export const enum Battery {
+export const enum BatteryLevel {
   MIN = 0,
   MAX = 100
 }
-
-export const INTERVAL_REFRESH_RATE = 1000;

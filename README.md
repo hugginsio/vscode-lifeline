@@ -14,7 +14,7 @@ Lifeline will also show that your laptop is charging.
 
 ## Configuration
 ### `lifeline.clock.format`
-Sets the datetime display format for the clock. By default, set to `hh:mm:ss A`.
+Sets the datetime display format for the clock. By default, set to `h:mm:ss A`.
 
 ### `lifeline.swap`
 Swap the display order of the battery and clock. By default, set to `false`.

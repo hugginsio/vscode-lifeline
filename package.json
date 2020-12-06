@@ -36,7 +36,7 @@
 				"lifeline.clock.format": {
 					"type": "string",
 					"default": "h:mm:ss A",
-					"description": "Set the datetime display format for the clock."
+					"description": "Set the display format for the clock."
 				},
 				"lifeline.swap": {
 					"type": "boolean",
